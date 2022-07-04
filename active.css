@@ -1,0 +1,14 @@
+#x2,#x4,#x8{
+    font-size: 50px;
+
+}
+#x16,#x32,#x64{
+    font-size: 40px;
+
+}
+#x128,#x256,#x512{
+    font-size: 35px;
+}
+#x1024,#x2048,#x4096{
+    font-size: 25px;
+}
