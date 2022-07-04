@@ -1,14 +1,52 @@
-#x2,#x4,#x8{
+#x2{
     font-size: 50px;
-
+}
+#x4,#x8{
+    font-size: 50px;
 }
 #x16,#x32,#x64{
     font-size: 40px;
 
 }
 #x128,#x256,#x512{
-    font-size: 35px;
+    font-size: 30px;
 }
 #x1024,#x2048,#x4096{
-    font-size: 25px;
+    font-size: 20px;
+}
+#x16,#x32,#x64,#x128,#x256,#x512,#x1024,#x2048,#x4096{
+    color: white;
+}
+#x2{
+    background-color: white;
+}
+#x4{
+    background-color: #FFFDA0;
+}
+#x8{
+    background-color: #FFC259;
+}
+#x16{
+    background-color: #FF712B;
+}
+#x32{
+    background-color: #D34D32;
+}
+#x64{
+    background-color: #D83B1C;
+}
+#x128{
+    background-color: #51C8FF;
+}
+#x256{
+    background-color: #35C2FF;
+}
+#x512{
+    background-color: #35C2FF;
+}
+#x1024{
+    background-color: #11B7FF;
+}
+#x2048{
+    background-color: #00B2FF;
 }

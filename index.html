@@ -4,40 +4,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="active.css">
     <link rel="stylesheet" type="text/js" href="script.js">
     <title>Play Game 2048</title>
 </head>
 
 <body style="background-color: rgb(169, 187, 214);" id="body">
-    <div class="main-box" >
-        <div class="head">
-            <button  onclick="New_Game()">Reset</button>
-            <button onclick="">Undo</button>
-            <div align="center" style="margin-left:60px;display: flex inline-block;width: auto;height:100%;background-color: rgba(255, 255, 255, 1); border-radius: 5px;">Score
-                <span id="score">0</span></div>
-            <div align="center" style="margin-left:10px;display: flex inline-block;width: auto;height: 100%;background-color: white;border-radius: 5px;">Highest
-                <span>0</span></div>
-        </div>
-        <div class="grid-container">
-            <div class="num-box" id="1"></div>
-            <div class="num-box" id="2"></div>
-            <div class="num-box" id="3"></div>
-            <div class="num-box" id="4"></div>
-            <div class="num-box" id="5"></div>
-            <div class="num-box" id="6"></div>
-            <div class="num-box" id="7"></div>
-            <div class="num-box" id="8"></div>
-            <div class="num-box" id="9"></div>
-            <div class="num-box" id="10"></div>
-            <div class="num-box" id="11"></div>
-            <div class="num-box" id="12"></div>
-            <div class="num-box" id="13"></div>
-            <div class="num-box" id="14"></div>
-            <div class="num-box" id="15"></div>
-            <div class="num-box" id="16"></div>
+    <div style="justify-content: center;display: flex;">
+        <div class="main-box" >
+            <div class="head">
+                <button style="display: flex inline-block;width: auto;height:100%;background-color: rgba(255, 255, 255, 1); border-radius: 5px;"  onclick="New_Game()">Reset</button>
+                <button style="margin-left: 10px; display: flex inline-block;width: auto;height:100%;background-color: rgba(255, 255, 255, 1); border-radius: 5px;"onclick="">Undo</button>
+                <div align="center" style="margin-left:60px;display: flex inline-block;width: auto;height:100%;background-color: rgba(255, 255, 255, 1); border-radius: 5px;">Score
+                    <span id="score">0</span></div>
+                <div align="center" style="margin-left:10px;display: flex inline-block;width: auto;height: 100%;background-color: white;border-radius: 5px;">Highest
+                    <span>0</span></div>
+            </div>
+            <div class="grid-container">
+                <div class="num-box" id="1"></div>
+                <div class="num-box" id="2"></div>
+                <div class="num-box" id="3"></div>
+                <div class="num-box" id="4"></div>
+                <div class="num-box" id="5"></div>
+                <div class="num-box" id="6"></div>
+                <div class="num-box" id="7"></div>
+                <div class="num-box" id="8"></div>
+                <div class="num-box" id="9"></div>
+                <div class="num-box" id="10"></div>
+                <div class="num-box" id="11"></div>
+                <div class="num-box" id="12"></div>
+                <div class="num-box" id="13"></div>
+                <div class="num-box" id="14"></div>
+                <div class="num-box" id="15"></div>
+                <div class="num-box" id="16"></div>
+            </div>
         </div>
     </div>
-    
 </body>
 
 <script>
@@ -615,11 +617,11 @@ function handleTouchMove(evt) {
                                                                          
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
-            number = GeserKanan();
+            number = GeserKiri();
         
             /* right swipe */ 
         } else {
-            number = GeserKiri();
+            number = GeserKanan();
             /* left swipe */
         }                       
     } else {
