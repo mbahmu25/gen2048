@@ -15,10 +15,8 @@
             <div class="head">
                 <button style="padding:4px;display: flex inline-block;width: auto;height:100%;background-color: rgba(255, 255, 255, 1); border-radius: 5px;"  onclick="New_Game()">Reset</button>
                 <button style="padding:4px;margin-left:8px; display: flex inline-block;width: auto;height:100%;background-color: rgba(255, 255, 255, 1); border-radius: 5px;"onclick="undoFunc()">Undo</button>
-                <div align="center" style="margin-left:60px;display: flex inline-block;width: auto;height:100%;background-color: rgba(255, 255, 255, 1); border-radius: 5px;">Score
-                    <span id="score">0</span></div>
-                <div align="center" style="margin-left:10px;display: flex inline-block;width: auto;height: 100%;background-color: white;border-radius: 5px;">Highest
-                    <span id="HighScore">0</span></div>
+                <div align="center" style="padding-left:3px;padding-right:3px;margin-left:60px;display: flex inline-block;width: auto;height:100%;background-color: rgba(255, 255, 255, 1); border-radius: 5px;">Score<br><span id="score">0</span></div>
+                <div align="center" style="padding-left:3px;padding-right:3px;margin-left:10px;display: flex inline-block;width: auto;height: 100%;background-color: white;border-radius: 5px;">Highest<br><span id="HighScore">0</span></div>
             </div>
             <div class="grid-container">
                 <div class="num-box" id="1"></div>
@@ -633,19 +631,26 @@ function handleTouchMove(evt) {
                                                                          
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
+            Undo = number;
             number = GeserKiri();
-        
+            hiSco();
             /* right swipe */ 
         } else {
+            Undo = number;
             number = GeserKanan();
+            hiSco();
             /* left swipe */
         }                       
     } else {
         if ( yDiff > 0 ) {
+            Undo = number;
             number = GeserAtas();
+            hiSco();
             /* down swipe */ 
         } else {
+            Undo = number;
             number = GeserBawah();
+            hiSco();
             /* up swipe */
         }                                                                 
     }
